@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 10%;
+
+    --primary: 12 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 70% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 20% 45%;
+
+    --accent: 25 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 10% 90%;
+    --input: 214 10% 90%;
+    --ring: 12 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 12 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 12 90% 50%;
+  }
+
+  .dark {
+    --background: 220 40% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 40% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 40% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 12 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 70% 40%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 15% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 25 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 15% 25%;
+    --input: 217 15% 25%;
+    --ring: 12 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .fire-card {
+    @apply bg-gradient-to-br from-fire-50 to-fire-100 border border-fire-200 shadow-md rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .navy-card {
+    @apply bg-gradient-to-br from-navy-50 to-navy-100 border border-navy-200 shadow-md rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .btn-fire {
+    @apply bg-fire-500 hover:bg-fire-600 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .btn-navy {
+    @apply bg-navy-600 hover:bg-navy-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+}
